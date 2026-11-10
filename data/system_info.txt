@@ -1,0 +1,23 @@
+## date
+Tue Nov 10 15:17:11 UTC 2026
+## macOS
+ProductName:		macOS
+ProductVersion:		26.5.2
+BuildVersion:		25F84
+## model
+Mac15,6
+## CPU
+Apple M3 Pro
+## cores (performance, efficiency)
+5
+6
+## memory (bytes)
+19327352832
+## power
+Now drawing from 'AC Power'
+## Java
+openjdk version "25.0.2" 2026-01-20 LTS
+OpenJDK Runtime Environment Temurin-25.0.2+10 (build 25.0.2+10-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.2+10 (build 25.0.2+10-LTS, mixed mode, sharing)
+## JVM flags
+-XX:-AOTInvokeDynamicLinking -XX:-AOTRecordTraining -XX:-AOTReplayTraining -XX:ConcGCThreads=2 -XX:G1ConcRefinementThreads=9 -XX:InitialHeapSize=1073741824 -XX:MarkStackSize=4194304 -XX:MaxHeapSize=1073741824 -XX:MinHeapSize=1073741824 -XX:+PrintCommandLineFlags -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:+UseCompressedOops -XX:+UseG1GC 

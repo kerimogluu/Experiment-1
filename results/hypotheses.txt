@@ -1,0 +1,31 @@
+Decision rule: A < B  iff  median(A) < median(B) and Q3(A) < Q1(B)
+
+H1: For every input type and array size, WhileNeeded has a lower median execution time than PassPerItem and UntilNoChange.
+  [OK  ] SORTED  n=1000   WhileNeeded: median=0.0026 ms IQR=[0.0023, 0.0028]  vs  PassPerItem: median=0.5456 ms IQR=[0.5389, 0.5683]
+  [FAIL] SORTED  n=1000   WhileNeeded: median=0.0026 ms IQR=[0.0023, 0.0028]  vs  UntilNoChange: median=0.0025 ms IQR=[0.0022, 0.0028]
+  [OK  ] SORTED  n=5000   WhileNeeded: median=0.0069 ms IQR=[0.0066, 0.0073]  vs  PassPerItem: median=14.0121 ms IQR=[13.9924, 14.0674]
+  [FAIL] SORTED  n=5000   WhileNeeded: median=0.0069 ms IQR=[0.0066, 0.0073]  vs  UntilNoChange: median=0.0069 ms IQR=[0.0065, 0.0072]
+  [OK  ] SORTED  n=10000  WhileNeeded: median=0.0123 ms IQR=[0.0119, 0.0127]  vs  PassPerItem: median=57.7107 ms IQR=[57.6638, 58.0814]
+  [FAIL] SORTED  n=10000  WhileNeeded: median=0.0123 ms IQR=[0.0119, 0.0127]  vs  UntilNoChange: median=0.0122 ms IQR=[0.0119, 0.0127]
+  [OK  ] REVERSE n=1000   WhileNeeded: median=1.1183 ms IQR=[1.0951, 1.1287]  vs  PassPerItem: median=1.2633 ms IQR=[1.2367, 1.3062]
+  [OK  ] REVERSE n=1000   WhileNeeded: median=1.1183 ms IQR=[1.0951, 1.1287]  vs  UntilNoChange: median=1.5377 ms IQR=[1.4958, 1.5836]
+  [OK  ] REVERSE n=5000   WhileNeeded: median=28.4410 ms IQR=[28.3881, 28.5371]  vs  PassPerItem: median=32.2140 ms IQR=[32.1657, 32.3198]
+  [OK  ] REVERSE n=5000   WhileNeeded: median=28.4410 ms IQR=[28.3881, 28.5371]  vs  UntilNoChange: median=39.0315 ms IQR=[38.8965, 39.0769]
+  [OK  ] REVERSE n=10000  WhileNeeded: median=114.5491 ms IQR=[114.4610, 114.8126]  vs  PassPerItem: median=130.3205 ms IQR=[130.1818, 130.9534]
+  [OK  ] REVERSE n=10000  WhileNeeded: median=114.5491 ms IQR=[114.4610, 114.8126]  vs  UntilNoChange: median=157.0434 ms IQR=[156.8361, 158.4907]
+  [OK  ] RANDOM  n=1000   WhileNeeded: median=0.9049 ms IQR=[0.8911, 0.9386]  vs  PassPerItem: median=1.1066 ms IQR=[1.0988, 1.1466]
+  [OK  ] RANDOM  n=1000   WhileNeeded: median=0.9049 ms IQR=[0.8911, 0.9386]  vs  UntilNoChange: median=1.2700 ms IQR=[1.2497, 1.2995]
+  [OK  ] RANDOM  n=5000   WhileNeeded: median=21.9250 ms IQR=[21.8615, 22.0028]  vs  PassPerItem: median=28.2387 ms IQR=[28.0685, 28.4011]
+  [OK  ] RANDOM  n=5000   WhileNeeded: median=21.9250 ms IQR=[21.8615, 22.0028]  vs  UntilNoChange: median=31.9867 ms IQR=[31.8180, 32.1855]
+  [OK  ] RANDOM  n=10000  WhileNeeded: median=88.8146 ms IQR=[88.4415, 89.1187]  vs  PassPerItem: median=118.5087 ms IQR=[117.7928, 119.2039]
+  [OK  ] RANDOM  n=10000  WhileNeeded: median=88.8146 ms IQR=[88.4415, 89.1187]  vs  UntilNoChange: median=131.4330 ms IQR=[130.7850, 132.5983]
+  => H1 NOT SUPPORTED
+
+H2: On sorted input, UntilNoChange and WhileNeeded have a lower median execution time than PassPerItem for every array size.
+  [OK  ] SORTED  n=1000   UntilNoChange: median=0.0025 ms IQR=[0.0022, 0.0028]  vs  PassPerItem: median=0.5456 ms IQR=[0.5389, 0.5683]
+  [OK  ] SORTED  n=1000   WhileNeeded: median=0.0026 ms IQR=[0.0023, 0.0028]  vs  PassPerItem: median=0.5456 ms IQR=[0.5389, 0.5683]
+  [OK  ] SORTED  n=5000   UntilNoChange: median=0.0069 ms IQR=[0.0065, 0.0072]  vs  PassPerItem: median=14.0121 ms IQR=[13.9924, 14.0674]
+  [OK  ] SORTED  n=5000   WhileNeeded: median=0.0069 ms IQR=[0.0066, 0.0073]  vs  PassPerItem: median=14.0121 ms IQR=[13.9924, 14.0674]
+  [OK  ] SORTED  n=10000  UntilNoChange: median=0.0122 ms IQR=[0.0119, 0.0127]  vs  PassPerItem: median=57.7107 ms IQR=[57.6638, 58.0814]
+  [OK  ] SORTED  n=10000  WhileNeeded: median=0.0123 ms IQR=[0.0119, 0.0127]  vs  PassPerItem: median=57.7107 ms IQR=[57.6638, 58.0814]
+  => H2 SUPPORTED

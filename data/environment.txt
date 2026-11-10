@@ -1,0 +1,13 @@
+timestamp=2026-11-10T15:17:11.569628Z
+java.version=25.0.2
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vm.version=25.0.2+10-LTS
+os.name=Mac OS X
+os.version=26.5.2
+os.arch=aarch64
+available.processors=11
+max.heap.bytes=1073741824
+reps=30
+warmup=10
+seed=42
+sizes=[1000, 5000, 10000]
